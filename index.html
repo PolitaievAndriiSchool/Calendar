@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Календарь</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Мой календарик</h1>
+    <div class="calendar-header">
+        <button id="prev-month">⬅</button>
+        <h2 id="month-year"> </h2>
+        <button id="next-month">➡</button>
+        <button id="theme-toggle">Тема</button>
+    </div>
+    <div class="calendar" id="calendar"></div>
+    
+        <h3>Мої події</h3>
+       <input type="text" id="search-input" placeholder="Пошук">
+       <ul id="event-list"></ul>
+
+      <div class="event-actions">
+        <button id="export-events">Експортувати</button>
+    <input type="file" id="import-events" accept="application/json">  
+    </div>
+
+    <div id="event-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h3>Додати подію</h3>
+            <form id="event-form">
+                <input type="text" id="event-title" placeholder="Назва" required>
+                <input type="time" id="event-time" required>
+                <button type="submit">Зберегти</button>
+            <button type="button" id="delete-event">видалити</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

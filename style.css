@@ -1,0 +1,71 @@
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #000;
+    --calendar-bg: #fff;
+    --day-bg: #eaeaea;
+}
+
+body.dark {
+    --bg-color: #121212;
+    --text-color: #f4f4f4;
+    --calendar-bg: #1e1e1e;
+    --day-bg: #2a2a2a;
+}
+
+
+body {
+    font-family: arial;
+    padding: 20px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 20px;
+    background: var(--calendar-bg);
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.holiday {
+    color: rgb(0, 0, 255);
+}
+.weekend {
+    color: red;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 0; 
+    top:0;
+    width: 100%; 
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4) ;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    margin: 15% auto;
+    width: 300px;
+    border-radius: 8px;
+}
+.close {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
